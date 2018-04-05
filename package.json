@@ -16,8 +16,11 @@
     "react-test-renderer": "^16.3.1"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "_symlink-env": "rm .env && ln -s ../dotenv/common .env",
+    "start": "npm run _symlink-env && npm run watch-css && react-scripts start",
+    "build": "npm run _symlink-env && npm run build-css && react-scripts build",
+    "build-css": "node-sass-chokidar src/ -o src/",
+    "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   }
