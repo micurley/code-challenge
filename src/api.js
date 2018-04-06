@@ -8,9 +8,9 @@ axiosInstance.defaults.headers.common['Content-Type'] = 'application/json';
 const users = async username => {
   const path = username;
 
+  console.log('process.env: ', process.env);
   let response = await axiosInstance.get(path);
   let users = Array.isArray(response.data) ? response.data : [response.data];
-  console.log('process.env: ', process.env);
   return {
     headers: response.headers,
     users,
