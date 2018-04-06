@@ -9,10 +9,12 @@ const users = async username => {
   const path = username;
 
   let response = await axiosInstance.get(path);
+  let users = Array.isArray(response.data) ? response.data : [response.data];
   console.log('response: ', response);
-  let data = await response.data;
-  console.log('data: ', data);
-  return Array.isArray(data) ? data : [data];
+  return {
+    headers: response.headers,
+    users,
+  };
 };
 
 const repos = async username => {

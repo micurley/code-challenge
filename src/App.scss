@@ -1,5 +1,15 @@
 .App {
   padding: 10px;
+  .api-access {
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+    font-style: italic;
+    margin-top: -22px;
+    padding-left: 17px;
+    padding-bottom: 10px;
+  }
+
   .Github {
     display: flex;
     justify-content: space-evenly;
