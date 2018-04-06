@@ -23,12 +23,13 @@
   },
   "scripts": {
     "_symlink-env": "rm -f .env && ln -s ../dotenv/common .env",
+    "_symlink-test": "rm -f .env.test && ln -s ../dotenv/test .env.test",
     "start-js": "react-scripts start",
     "start": "npm-run-all -p watch-css start-js",
     "build": "npm run _symlink-env && npm run build-css && react-scripts build",
     "build-css": "node-sass-chokidar src/ -o src/",
     "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive",
-    "test": "react-scripts test --env=jsdom",
+    "test": "npm run _symlink-test && react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   }
 }
