@@ -25,9 +25,10 @@
   "scripts": {
     "_symlink-env": "rm -f .env && ln -s ../dotenv/common .env",
     "_symlink-test": "rm -f .env.test && ln -s ../dotenv/test .env.test",
+    "_symlink-production": "rm -f .env.production && ln -s ../dotenv/production .env.production",
     "start-js": "react-scripts start",
     "start": "npm-run-all -p watch-css start-js",
-    "build": "npm run _symlink-env && npm run build-css && react-scripts build",
+    "build": "npm run _symlink-env && npm run _symlink-production && npm run build-css && react-scripts build",
     "build-css": "node-sass-chokidar src/ -o src/",
     "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive",
     "test": "npm run _symlink-test && react-scripts test --env=jsdom",
