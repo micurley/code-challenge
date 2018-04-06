@@ -1,0 +1,27 @@
+.Search {
+  div & {
+    position: relative;
+    width: 300px;
+  }
+
+  .icon {
+    position: absolute;
+    top: 0;
+    right: -55px;
+  }
+
+  input {
+    border: 0;
+    border-bottom: 1px solid gray;
+    font-size: 24px;
+    outline: none;
+    padding: 10px;
+    padding-right: 55px;
+    transition: width 2s;
+    width: 100%;
+
+    &.populated {
+      // width: 50%;
+    }
+  }
+}
