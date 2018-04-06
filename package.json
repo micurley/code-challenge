@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "proxy": "https://api.github.com/users",
+  "homepage": "https://micurley.github.io/code-challenge",
   "dependencies": {
     "ajv": "^6.4.0",
     "axios": "^0.18.0",
@@ -30,6 +31,10 @@
     "build-css": "node-sass-chokidar src/ -o src/",
     "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive",
     "test": "npm run _symlink-test && react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy" : "npm run build && gh-pages -d build"
+  },
+  "devDependencies": {
+    "gh-pages": "^1.1.0"
   }
 }
