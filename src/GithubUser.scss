@@ -1,8 +1,6 @@
 .GithubUser {
   &.wrapper {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial,
-      sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
-    max-width: 240px;
+    width: 240px;
     text-align: left;
     color: #24292e;
   }
@@ -10,7 +8,7 @@
   .container {
     padding: 5px;
     &:hover {
-      box-shadow: 1px 1px 3px #ddd;
+      box-shadow: 0 0 3px 3px #ddd;
       border-radius: 6px;
     }
   }
@@ -51,9 +49,27 @@
     }
   }
 
-  .statistics {
+  ul.statistics {
     list-style: none;
-    padding-left: 0px;
-    margin-top: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left: -15px;
+    padding-left: 0;
+
+    li {
+      flex-grow: 1;
+      flex-basis: auto;
+      margin: 0.05em 0;
+      padding: 0 0.25em;
+      text-align: center;
+      border-left: 1px solid #ccc;
+      background-color: #fff;
+
+      &:first-child {
+        border-left: none;
+      }
+    }
   }
 }

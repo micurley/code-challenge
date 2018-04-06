@@ -20,7 +20,7 @@ const Search = ({onChange, is_set}) => {
     <div className="Search">
       <input
         type="text"
-        placeholder="Enter a github username"
+        placeholder="Search github users"
         ref={ref => (input = ref)}
       />
       <div className="icon">

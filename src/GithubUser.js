@@ -32,6 +32,7 @@ const GithubUser = ({user, onClick}) => {
         </h1>
 
         <div className="rule" />
+        {/* not worried about this for now
         <ul className="location">
           <li>
             <FontAwesome name="map-marker" size="1x" />
@@ -43,12 +44,11 @@ const GithubUser = ({user, onClick}) => {
           </li>
         </ul>
         <div className="rule" />
-
+        */}
         <ul className="statistics">
           <li>followers: {followers}</li>
           <li>following: {following}</li>
           <li>repos: {public_repos}</li>
-          <li>gists: {public_gists}</li>
         </ul>
       </div>
     </div>
@@ -56,7 +56,6 @@ const GithubUser = ({user, onClick}) => {
 };
 
 GithubUser.propTypes = {
-  onClick: PropTypes.func.isRequired,
   user: PropTypes.shape({
     login: PropTypes.string.isRequired,
     avatar_url: PropTypes.string.isRequired,
