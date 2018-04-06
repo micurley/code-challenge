@@ -14,8 +14,6 @@
     display: flex;
     flex-flow: column nowrap;
     align-items: space-evenly;
-    overflow: hidden;
-    max-height: 70px;
   }
 
   h3 {
@@ -26,14 +24,9 @@
 
   .description {
     flex: 2;
+    overflow: hidden;
+    max-height: 70px;
   }
-  // ul.statistics {
-  //   list-style: none;
-  //   li {
-  //     float: left;
-  //     padding-right: 5px;
-  //   }
-  // }
 
   ul.statistics {
     list-style: none;

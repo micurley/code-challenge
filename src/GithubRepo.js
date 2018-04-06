@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import FontAwesome from 'react-fontawesome';
 import bytes from 'bytes';
 
 import './GithubRepo.css';
@@ -9,14 +8,14 @@ import './GithubRepo.css';
 const GithubRepo = ({repo}) => {
   let {
     name,
-    full_name,
+    // full_name,
     description,
     html_url,
     stargazers_count,
     forks_count,
     open_issues_count,
     size,
-    created_at,
+    // created_at,
   } = repo;
 
   return (

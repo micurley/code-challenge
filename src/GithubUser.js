@@ -1,7 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import FontAwesome from 'react-fontawesome';
-import moment from 'moment-timezone';
 
 import './GithubUser.css';
 
@@ -10,20 +8,20 @@ const GithubUser = ({user, onClick}) => {
     avatar_url,
     login,
     name,
-    location,
-    email,
+    // location,
+    // email,
     followers,
     following,
     public_repos,
-    public_gists,
-    created_at,
+    // public_gists,
+    // created_at,
   } = user;
 
   return (
     <div className="GithubUser wrapper" onClick={onClick}>
       <div className="container">
         <div className="avatar">
-          <img src={avatar_url} title={name} />
+          <img src={avatar_url} title={name} alt={name} />
         </div>
 
         <h1>
@@ -61,7 +59,6 @@ GithubUser.propTypes = {
     avatar_url: PropTypes.string.isRequired,
     html_url: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
-    login: PropTypes.string.isRequired,
     company: PropTypes.string,
     blog: PropTypes.string,
     location: PropTypes.string,

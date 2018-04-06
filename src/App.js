@@ -1,11 +1,10 @@
 import React, {Component} from 'react';
-import {debounce} from 'lodash/debounce';
-import {omit} from 'lodash/omit';
 import api from './api';
 
 import Search from './Search';
 import GithubUser from './GithubUser';
 import GithubRepo from './GithubRepo';
+
 import './App.css';
 
 class App extends Component {
