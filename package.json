@@ -28,7 +28,7 @@
     "_symlink-production": "rm -f .env.production && ln -s ../dotenv/production .env.production",
     "start-js": "react-scripts start",
     "start": "npm-run-all -p watch-css start-js",
-    "build": "npm run _symlink-env && npm run _symlink-production && npm run build-css && react-scripts build",
+    "build": "npm run _symlink-env && npm run _symlink-production && npm run build-css && REACT_APP_API=https://api.github.com/users react-scripts build",
     "build-css": "node-sass-chokidar src/ -o src/",
     "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive",
     "test": "npm run _symlink-test && react-scripts test --env=jsdom",
