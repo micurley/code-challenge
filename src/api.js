@@ -10,7 +10,7 @@ const users = async username => {
 
   let response = await axiosInstance.get(path);
   let users = Array.isArray(response.data) ? response.data : [response.data];
-  console.log('response: ', response);
+  console.log('process.env: ', process.env);
   return {
     headers: response.headers,
     users,
