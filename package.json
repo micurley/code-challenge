@@ -6,7 +6,7 @@
   "homepage": "https://micurley.github.io/code-challenge",
   "dependencies": {
     "ajv": "^6.4.0",
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "bytes": "^3.0.0",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
